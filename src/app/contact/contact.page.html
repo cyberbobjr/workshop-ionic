@@ -1,17 +1,25 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Contact
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Contacts
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="logo-ionic" slot="start"></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+    <ion-list>
+        <ion-item *ngFor="let contact of people" lines="full" detail>
+            <ion-avatar slot="start">
+                <ion-img [src]="contact.picture.thumbnail"></ion-img>
+            </ion-avatar>
+            <ion-label>
+                <h2>
+                    {{contact.name.title | titlecase}} {{contact.name.first | titlecase}} {{contact.name.last |
+                    titlecase}}
+                </h2>
+                <h3>{{contact.cell}}</h3>
+                <p>{{contact.email}}</p>
+            </ion-label>
+        </ion-item>
+    </ion-list>
 </ion-content>
