@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
                 providedIn: 'root'
             })
 export class PeopleService {
-    url = 'https://randomuser.me/api/?results=10&nat=fr';
+    url = 'https://randomuser.me/api/?results=20&nat=fr';
 
     constructor(private httpClient: HttpClient) {
     }
