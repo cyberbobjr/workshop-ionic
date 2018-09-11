@@ -2,11 +2,11 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {Routes, RouterModule} from '@angular/router';
-import {Contacts} from '@ionic-native/contacts/ngx';
 
 import {IonicModule} from '@ionic/angular';
 
 import {DetailContactPage} from './detail-contact.page';
+import {EmailComposer} from '@ionic-native/email-composer/ngx';
 
 const routes: Routes = [
     {
@@ -23,7 +23,7 @@ const routes: Routes = [
                   RouterModule.forChild(routes)
               ],
               declarations: [DetailContactPage],
-              providers: [Contacts]
+              providers: [EmailComposer]
           })
 export class DetailContactPageModule {
 }

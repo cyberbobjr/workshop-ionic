@@ -17,7 +17,7 @@
         </ion-card-header>
         <ion-card-content>
             <ion-list>
-                <ion-item>
+                <ion-item (click)="onClickAddContact()" detail>
                     <ion-icon name="mail" slot="start"></ion-icon>&nbsp;
                     {{contact.email}}
                 </ion-item>
@@ -26,9 +26,6 @@
                     {{contact.cell}}
                 </ion-item>
             </ion-list>
-            <ion-button expand="block" size="large" color="success" (click)="onClickAddContact()">
-                Ajouter aux contacts
-            </ion-button>
         </ion-card-content>
     </ion-card>
     {{contact | json}}
