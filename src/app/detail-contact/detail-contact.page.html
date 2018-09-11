@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Détail d'un contact</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="contact"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <img src="{{contact.picture.large}}"/>
+        <ion-card-header>
+            <ion-card-title>
+                {{contact.name.title | titlecase}} {{contact.name.first | titlecase}} {{contact.name.last | titlecase}}
+            </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list>
+                <ion-item>
+                    <ion-icon name="mail" slot="start"></ion-icon>&nbsp;
+                    {{contact.email}}
+                </ion-item>
+                <ion-item>
+                    <ion-icon name="call" slot="start"></ion-icon>&nbsp;
+                    {{contact.cell}}
+                </ion-item>
+            </ion-list>
+            <ion-button expand="block" size="large" color="success">
+                Ajouter aux contacts
+            </ion-button>
+        </ion-card-content>
+    </ion-card>
+    {{contact | json}}
+</ion-content>

@@ -8,7 +8,7 @@
 
 <ion-content>
     <ion-list>
-        <ion-item *ngFor="let contact of people" lines="full" detail>
+        <ion-item *ngFor="let contact of people" lines="full" detail (click)="openDetailPage(contact)">
             <ion-avatar slot="start">
                 <ion-img [src]="contact.picture.thumbnail"></ion-img>
             </ion-avatar>
