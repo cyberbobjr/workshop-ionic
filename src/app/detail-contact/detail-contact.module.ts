@@ -2,11 +2,11 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {Routes, RouterModule} from '@angular/router';
+import {Contacts} from '@ionic-native/contacts/ngx';
 
 import {IonicModule} from '@ionic/angular';
 
 import {DetailContactPage} from './detail-contact.page';
-import {Contacts, Contact, ContactField, ContactName} from '@ionic-native/contacts';
 
 const routes: Routes = [
     {
